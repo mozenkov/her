@@ -1,0 +1,30 @@
+<body>
+<style>
+    body{
+        margin: 0;
+    }
+    iframe,
+    textarea{
+        width: 100%;
+        height: 50vh;
+        float: left;
+    }
+    textarea{
+        font-family: monospace;
+        font-size: 11pt;
+        line-height: 1.4;
+        width: 33.33%;
+    }
+</style>
+<textarea id="h" placeholder="HTML"></textarea>
+<textarea id="c" placeholder="CSS"></textarea>
+<textarea id="j" placeholder="JS"></textarea>
+<iframe></iframe>
+<script>
+    document.body.oninput = function(){
+        document.querySelector('iframe').srcdoc
+                = h.value+'<style>'+c.value+'</style><script>'+j.value+'<\/script>'
+    }
+</script>
+</body>
+

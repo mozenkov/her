@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mozenkov.</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+    <script src="cookies.js"></script>
+    <style>
+        div{
+            margin:10px;
+        }
+        #sessionstr, #cookiestr{
+            width: 100px;
+            background-color: yellow;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+<h1>Cookie Changer</h1>
+</div>
+<form>
+    <div class="wrap">
+        <label class="fontColor" for="key">Enter key:</label>
+        <input type="text" id="key"/>
+    </div>
+    <div class="wrap">
+        <label class="fontColor" for="value">Enter value:</label>
+        <input type="text" id="value"/>
+    </div>
+</form>
+<div class="wrap">
+<button class="button" id="set">Set data</button>
+<button class="button" id="get">Get data</button>
+<button class="button" id="erase">Erase data</button>
+</div>
+<div class="wrap">
+<p class="fontColor">Session:</p>
+<div id="sessionstr"></div>
+<p class="fontColor">Cookie:</p>
+<div id="cookiestr"></div>
+</div>
+<script>
+    document.getElementById("set").onclick=setData;
+    document.getElementById("get").onclick=getData;
+    document.getElementById("erase").onclick=removeData;
+</script>
+
+
+
+
+
+</body>
+</html>
